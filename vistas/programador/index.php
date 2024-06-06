@@ -14,9 +14,19 @@
             </div>
             <div class="col-2">
                 <label for="progra_edad">Edad</label>
-                <input type="number" name="progra_edad" id="progra_edad" class="form-control" required>
+                <input type="number" name="progra_edad" id="progra_edad" step="1" class="form-control" required>
             </div>
         </div>
+        <div class="row mb-3">
+            <div class="col-6">
+                <label for="progra_correo">Correo</label>
+                <input type="mail" name="progra_correo" id="progra_correo" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="progra_direccion">Direccion</label>
+                <input type="text" name="progra_direccion" id="progra_direccion" class="form-control" required>
+            </div>
+        </div> 
         <div class="row mb-3">
             <div class="col-4">
                 <label for="progra_telefono">Teléfono</label>
@@ -24,20 +34,20 @@
             </div>
             <div class="col-4">
                 <label for="progra_depenencia">Dependencia</label>
-                <input type="number" name="progra_depenencia" id="progra_depenencia" step="1" class="form-control" required>
+                <input type="text" name="progra_depenencia" id="progra_depenencia" class="form-control" required>
             </div>
             <div class="col-4">
-            <label for="progra_genero">Género</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Selecction</option>
-                <option value="1">Masculino</option>
-                <option value="2">Femenino</option>
-            </select>
+                <label for="progra_genero">Género</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccione</option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                </select>
             </div>
-        </div>
+        </div>               
         <div class="row mb-3">
             <div class="col-6">
-                <button type="submit" class="btn btn-primary w-100">Guardar</button>
+                <button type="submit" class="btn btn-primary w-100">Registrar</button>
             </div>
             <div class="col-6">
                 <a href="#" class="btn btn-warning w-100 text-light">Buscar</a>
