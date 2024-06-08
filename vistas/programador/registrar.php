@@ -2,7 +2,7 @@
 
 <h1 class="text-center">Registro de Programadores</h1>
 <div class="row justify-content-center">
-    <form action="../../controladores/programador/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
+    <form action="../../controladores/programador/guardar.php" method="POST" class="border shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
         <div class="row mb-3">
             <div class="col-5">
                 <label for="progra_nombre">Nombre</label>
@@ -46,12 +46,11 @@
             </div>
         </div>
         <div class="row mb-3">
+            <div class="col-3"></div>
             <div class="col-6">
                 <button type="submit" class="btn btn-primary w-100">Registrar</button>
             </div>
-            <div class="col-6">
-                <a href="#" class="btn btn-warning w-100 text-light">Buscar</a>
-            </div>
+            <div class="col-3"></div>
         </div>
     </form>
 </div>

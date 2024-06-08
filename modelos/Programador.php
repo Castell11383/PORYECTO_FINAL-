@@ -28,4 +28,22 @@ class Programador extends Conexion{
         $resultado = $this->ejecutar($sql);
         return $resultado; 
     }
+
+    public function buscar(...$columnas) {
+        $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
+        $sql = "SELECT $cols FROM programadores where progra_situacion = 1 ";
+
+        if($this->progra_nombre != ''){
+            $sql .= " AND progra_nombre like '%$this->progra_nombre%' ";
+        }
+        if($this->progra_apellido != ''){
+            $sql .= " AND progra_apellido like '%$this->progra_apellido%' ";
+        }
+        if($this->progra_dependencia != ''){
+            $sql .= " AND progra_dependencia like '%$this->progra_dependencia%' ";
+        }
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
 }

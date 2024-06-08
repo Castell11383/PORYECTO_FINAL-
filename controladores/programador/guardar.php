@@ -56,9 +56,11 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-lg-6">
-            <a href="../../vistas/producto/index.php" class="btn btn-primary w-100">Volver al formulario</a>
+        <div class="col-5"></div>
+        <div class="col-lg-2">
+            <a href="../../vistas/templates/inicio.php" class="btn btn-primary w-100"><i class="bi bi-backspace-fill"></i >Volver</a>
         </div>
+        <div class="col-5"></div>
     </div>
 
 
