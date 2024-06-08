@@ -2,7 +2,7 @@
 
 <h1 class="text-center">Registro de Programadores</h1>
 <div class="row justify-content-center">
-    <form action="/crud_2024/controladores/cliente/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
+    <form action="../../controladores/programador/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
         <div class="row mb-3">
             <div class="col-5">
                 <label for="progra_nombre">Nombre</label>
@@ -20,31 +20,31 @@
         <div class="row mb-3">
             <div class="col-6">
                 <label for="progra_correo">Correo</label>
-                <input type="mail" name="progra_correo" id="progra_correo" class="form-control" required>
+                <input type="email" name="progra_correo" id="progra_correo" class="form-control" required>
             </div>
             <div class="col-6">
                 <label for="progra_direccion">Direccion</label>
                 <input type="text" name="progra_direccion" id="progra_direccion" class="form-control" required>
             </div>
-        </div> 
+        </div>
         <div class="row mb-3">
             <div class="col-4">
                 <label for="progra_telefono">Teléfono</label>
-                <input type="tel" name="progra_telefono" id="progra_telefono" step="1" class="form-control" required>
+                <input type="number" name="progra_telefono" id="progra_telefono" step="1" class="form-control" required>
             </div>
             <div class="col-4">
-                <label for="progra_depenencia">Dependencia</label>
-                <input type="text" name="progra_depenencia" id="progra_depenencia" class="form-control" required>
+                <label for="progra_dependencia">Dependencia</label>
+                <input type="text" name="progra_dependencia" id="progra_dependencia" class="form-control" required>
             </div>
             <div class="col-4">
                 <label for="progra_genero">Género</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione</option>
+                <select id="progra_genero" name="progra_genero" class="form-select" aria-label="Default select example" required>
+                    <option value="" disabled selected>Seleccione</option>
                     <option value="1">Masculino</option>
                     <option value="2">Femenino</option>
                 </select>
             </div>
-        </div>               
+        </div>
         <div class="row mb-3">
             <div class="col-6">
                 <button type="submit" class="btn btn-primary w-100">Registrar</button>
@@ -55,5 +55,6 @@
         </div>
     </form>
 </div>
-
+</form>
+</div>
 <?php include_once '../templates/footer.php'; ?>
