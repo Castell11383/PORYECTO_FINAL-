@@ -12,10 +12,8 @@ abstract class Conexion{
     
             } catch (PDOException $e) {
                 echo "No hay conexion a la BD";
-                echo "<br>";
                 echo $e->getMessage();
                 self::$conexion = null;
-                return null;
                 exit;
             }
         }
