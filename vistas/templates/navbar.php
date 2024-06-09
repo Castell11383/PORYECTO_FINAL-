@@ -10,10 +10,25 @@
           <a class="nav-link active" aria-current="page" href="../../vistas/templates/inicio.php"><i class="bi bi-house-fill me-2 "></i>Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../../vistas/programador/registrar.php"><i class="bi bi-person-circle"></i>Programadores</a>
+          <a class="nav-link active" aria-current="page" href="../../vistas/programador/registrar.php"><i class="bi bi-person-circle"></i> Programadores</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../../vistas/programador/buscar.php"><i class="bi bi-search"></i> Buscar</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-search"></i> Buscar
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../../vistas/programador/buscar.php">Busqueda</a></li>
+            <li><a class="dropdown-item" href="#">Modificar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-google-play"></i></i> Aplicaciones
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tareas</a></li>
+            <li><a class="dropdown-item" href="#">Modificar</a></li>
+          </ul>
         </li>
     </div>
   </div>

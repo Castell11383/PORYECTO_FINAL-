@@ -13,7 +13,6 @@ try {
         'mensaje' => 'Datos encontrados',
         'codigo' => 1
     ];
-    // var_dump($programadores);
 
 } catch (Exception $e) {
     $programador = [
@@ -67,7 +66,7 @@ include_once '../../vistas/templates/header.php'; ?>
                                     </button>
                                     <ul class="dropdown-menu bg-secondary bg-gradient text-light">
                                         <li><a class="dropdown-item" href="../../vistas/programador/modificar.php?progra_codigo=<?= base64_encode($programador['progra_codigo'])?>"><i class="bi bi-pencil-square me-2"></i>Modificar</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
+                                        <li><a class="dropdown-item" href="../../controladores/programador/eliminar.php?progra_codigo=<?= base64_encode($programador['progra_codigo'])?>"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
                                         <li><a class="dropdown-item" href="#"><i class="bi bi-device-ssd-fill"></i>Tareas</a></li>
                                     </ul>
                                 </div>
@@ -85,12 +84,10 @@ include_once '../../vistas/templates/header.php'; ?>
         </table>
         <div class="row mb-4 justify-content-center">
             <div class="col-lg-3">
-                <a href="../../vistas/programador/buscar.php" class="btn btn-danger text-light w-100"><i class="bi bi-backspace-fill"></i> Volver</a>
+                <a href="../../controladores/programador/buscar.php" class="btn btn-danger text-light w-100"><i class="bi bi-backspace-fill"></i> Volver</a>
             </div>
         </div>
     </div>
 </div>
 
 <?php include_once '../../vistas/templates/footer.php'; ?>
-
-<!-- /crud_2024/controladores/producto/eliminar.php?prod_id=<?= base64_encode($producto['prod_id']) ?> -->
