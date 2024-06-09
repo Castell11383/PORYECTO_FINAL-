@@ -9,25 +9,23 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="../../vistas/templates/inicio.php"><i class="bi bi-house-fill me-2 "></i>Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../../vistas/programador/registrar.php"><i class="bi bi-person-circle"></i> Programadores</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-search"></i> Buscar
+          <i class="bi bi-people-fill"></i></i> Programadores
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../../vistas/programador/buscar.php">Busqueda</a></li>
-            <li><a class="dropdown-item" href="#">Modificar</a></li>
+          <ul class="dropdown-menu bg-secondary bg-gradient text-black">
+            <li><a class="dropdown-item" href="../../vistas/programador/registrar.php"><i class="bi bi-person-fill-add"></i> Crear Programadores</a></li>
+            <li><a class="dropdown-item" href="../../vistas/programador/buscar.php"><i class="bi bi-binoculars-fill"></i> Buscar Programadores</a></li>
+            <li><a class="dropdown-item" href="../../controladores/programador/buscar.php"><i class="bi bi-people-fill"></i> Programadores</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-google-play"></i></i> Aplicaciones
+          <i class="bi bi-google-play"></i> Aplicaciones
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Tareas</a></li>
-            <li><a class="dropdown-item" href="#">Modificar</a></li>
+          <ul class="dropdown-menu bg-secondary bg-gradient text-black">
+            <li><a class="dropdown-item" href="../../vistas/aplicacion/registar.php"><i class="bi bi-device-ssd-fill"></i> Crear Aplicacion</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-binoculars-fill"></i> Ver Aplicaciones</a></li>
           </ul>
         </li>
     </div>
