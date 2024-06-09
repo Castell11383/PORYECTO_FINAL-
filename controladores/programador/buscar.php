@@ -1,12 +1,10 @@
 <?php
- ini_set('display_errors', '1');
- ini_set('display_startup_errors', '1');
- error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 require '../../modelos/Programador.php';
 
-// consulta
 try {
-    // var_dump($_GET);
     $_GET['progra_nombre'] = htmlspecialchars($_GET['progra_nombre']);
     $_GET['progra_apellido'] = htmlspecialchars($_GET['progra_apellido']);
     $objProgramador = new Programador($_GET);
@@ -15,7 +13,7 @@ try {
         'mensaje' => 'Datos encontrados',
         'codigo' => 1
     ];
-    // var_dump($productos);
+    // var_dump($programadores);
 
 } catch (Exception $e) {
     $programador = [
@@ -40,11 +38,6 @@ include_once '../../vistas/templates/header.php'; ?>
 <div class="row mb-4 justify-content-center">
     <div class="col-lg-6 alert alert-<?= $alertas[$programador['codigo']] ?>" role="alert">
         <?= $programador['mensaje'] ?>
-    </div>
-</div>
-<div class="row mb-4 justify-content-center">
-    <div class="col-lg-3">
-        <a href="../../vistas/programador/buscar.php" class="btn btn-danger text-light w-100"><i class="bi bi-backspace-fill"></i> Volver</a>
     </div>
 </div>
 <h1 class="text-center">Listado de Programadores</h1>
@@ -73,7 +66,7 @@ include_once '../../vistas/templates/header.php'; ?>
                                         Opciones
                                     </button>
                                     <ul class="dropdown-menu bg-secondary bg-gradient text-light">
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i>Modificar</a></li>
+                                        <li><a class="dropdown-item" href="../../vistas/programador/modificar.php?progra_codigo=<?= base64_encode($programador['progra_codigo'])?>"><i class="bi bi-pencil-square me-2"></i>Modificar</a></li>
                                         <li><a class="dropdown-item" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
                                         <li><a class="dropdown-item" href="#"><i class="bi bi-device-ssd-fill"></i>Tareas</a></li>
                                     </ul>
@@ -90,10 +83,14 @@ include_once '../../vistas/templates/header.php'; ?>
             </tbody>
 
         </table>
+        <div class="row mb-4 justify-content-center">
+            <div class="col-lg-3">
+                <a href="../../vistas/programador/buscar.php" class="btn btn-danger text-light w-100"><i class="bi bi-backspace-fill"></i> Volver</a>
+            </div>
+        </div>
     </div>
 </div>
 
 <?php include_once '../../vistas/templates/footer.php'; ?>
 
-<!-- /crud_2024/vistas/producto/modificar.php?prod_id=<?= base64_encode($producto['prod_id']) ?>"><i class="bi bi-pencil-square me-2 -->
 <!-- /crud_2024/controladores/producto/eliminar.php?prod_id=<?= base64_encode($producto['prod_id']) ?> -->

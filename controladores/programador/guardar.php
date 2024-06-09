@@ -58,7 +58,7 @@
     <div class="row justify-content-center">
         <div class="col-5"></div>
         <div class="col-lg-2">
-            <a href="../../vistas/templates/inicio.php" class="btn btn-primary w-100"><i class="bi bi-backspace-fill"></i >Volver</a>
+            <a href="../../vistas/programador/registrar.php" class="btn btn-primary w-100"><i class="bi bi-backspace-fill"></i >Volver</a>
         </div>
         <div class="col-5"></div>
     </div>

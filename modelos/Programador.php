@@ -46,4 +46,17 @@ class Programador extends Conexion{
         $resultado = self::servir($sql);
         return $resultado;
     }
+
+    public function buscarPorId($id){
+     
+        $sql = "SELECT * FROM programadores where progra_situacion = 1 and progra_codigo = $id ";
+
+        $resultado = array_shift( self::servir($sql));
+        return $resultado;
+    }
+    public function modificar(){
+        $sql = "INSERT into programadores (progra_nombre, progra_apellido, progra_correo, progra_direccion, progra_telefono, progra_dependencia, progra_genero) values ('$this->progra_nombre','$this->progra_apellido','$this->progra_correo','$this->progra_direccion','$this->progra_telefono','$this->progra_dependencia','$this->progra_genero')";
+        $resultado = $this->ejecutar($sql);
+        return $resultado; 
+    }
 }
