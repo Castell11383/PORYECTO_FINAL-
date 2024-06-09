@@ -55,7 +55,7 @@ class Programador extends Conexion{
         return $resultado;
     }
     public function modificar(){
-        $sql = "INSERT into programadores (progra_nombre, progra_apellido, progra_correo, progra_direccion, progra_telefono, progra_dependencia, progra_genero) values ('$this->progra_nombre','$this->progra_apellido','$this->progra_correo','$this->progra_direccion','$this->progra_telefono','$this->progra_dependencia','$this->progra_genero')";
+        $sql = "UPDATE programadores SET = progra_nombre '$this->progra_nombre', progra_apellido = '$this->progra_apellido', progra_correo = '$this->progra_correo', progra_direccion = '$this->progra_direccion', progra_telefono = '$this->progra_telefono', progra_dependencia = '$this->progra_dependencia', progra_genero = '$this->progra_genero' WHERE progra_codigo = $this->progra_codigo ";
         $resultado = $this->ejecutar($sql);
         return $resultado; 
     }
