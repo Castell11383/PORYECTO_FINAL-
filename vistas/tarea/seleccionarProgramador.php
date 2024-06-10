@@ -9,7 +9,7 @@ $programadores = $programadores_modelo->buscar();
 
 include_once '../templates/header.php'; ?>
 
-<h1 class="text-center text-black">SELECCIONE AL PROGRAMADOR</h1>
+<h1 class="text-center text-black">Selecionar Programador</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/tarea/buscarTareas.php" method="POST" class="border shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
         <div class="row mb-3">
@@ -25,7 +25,7 @@ include_once '../templates/header.php'; ?>
             <div class="row mb-3 mt-3">
                 <div class="col-3"></div>
                 <div class="col-6">
-                    <button type="submit" class="btn btn-primary w-100">VER CITAS</button>
+                    <button type="submit" class="btn btn-primary w-100">Ver citas</button>
                 </div>
                 <div class="col-3"></div>
             </div>

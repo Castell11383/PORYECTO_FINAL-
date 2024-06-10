@@ -45,7 +45,7 @@ include_once '../../vistas/templates/header.php'; ?>
         <?= $tarea['mensaje'] ?>
     </div>
 </div>
-<h1 class="text-center">Listado de Tareas</h1>
+<h1 class="text-center text-black">Listado de Tareas</h1>
 <div class="row justify-content-center">
     <div class="col-lg-10">
         <table class="table table-bordered table-hover text-center bg-dark bg-gradient text-light rounded shadow">
@@ -58,7 +58,6 @@ include_once '../../vistas/templates/header.php'; ?>
             <tbody>
                 <?php if ($tarea['codigo'] == 1 && count($tareas) > 0) : ?>
                     <?php
-                    // Obtener el nombre completo del programador y el nombre de la aplicación de la primera tarea
                     $nombre_completo = $tareas[0]['nombre_completo'];
                     $apli_nombre = $tareas[0]['apli_nombre'];
                     ?>
