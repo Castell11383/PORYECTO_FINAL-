@@ -11,7 +11,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-people-fill"></i></i> Programadores
+            <i class="bi bi-people-fill"></i> Programadores
           </a>
           <ul class="dropdown-menu bg-secondary bg-gradient text-black">
             <li><a class="dropdown-item" href="../../vistas/programador/registrar.php"><i class="bi bi-person-fill-add"></i> Crear Programadores</a></li>
@@ -21,7 +21,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-google-play"></i> Aplicaciones
+            <i class="bi bi-google-play"></i> Aplicaciones
           </a>
           <ul class="dropdown-menu bg-secondary bg-gradient text-black">
             <li><a class="dropdown-item" href="../../vistas/aplicacion/registar.php"><i class="bi bi-device-ssd-fill"></i> Crear Aplicacion</a></li>
@@ -31,7 +31,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-person-workspace"></i></i> Tareas
+            <i class="bi bi-person-workspace"></i></i> Tareas
           </a>
           <ul class="dropdown-menu bg-secondary bg-gradient text-black">
             <li><a class="dropdown-item" href="../../vistas/tarea/asignar.php"><i class="bi bi-pen-fill"></i> Asignar Programador</a></li>
