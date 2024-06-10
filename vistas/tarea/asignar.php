@@ -59,4 +59,4 @@ include_once '../templates/header.php'; ?>
 </div>
 </form>
 </div>
-<?php include_once '../templates/footer.php'; ?>>
+<?php include_once '../../vistas/templates/footer.php'; ?>

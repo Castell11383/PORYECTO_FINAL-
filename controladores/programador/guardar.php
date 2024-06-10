@@ -25,13 +25,13 @@
             $programador = new Programador($_POST);
             $guardar = $programador->registrar();
             $resultado = [
-                'mensaje' => 'PRODUCTO INSERTADO CORRECTAMENTE',
+                'mensaje' => 'PROGRAMADOR INSERTADO CORRECTAMENTE',
                 'codigo' => 1
             ];
             
         } catch (PDOException $pe){
             $resultado = [
-                'mensaje' => 'OCURRIO UN ERROR INSERTANDO A LA BD',
+                'mensaje' => 'OCURRIO UN ERROR INSERTANDO AL PROGRAMADOR A LA BD',
                 'detalle' => $pe->getMessage(),
                 'codigo' => 0
             ];

@@ -1,7 +1,7 @@
 <?php include_once '../../vistas/templates/header.php'; ?>
 
 <h1 class="text-center text-black">Busqueda de Programadores</h1>
-<div class="row justify-content-center">
+<div class="row justify-content-center text-center">
     <form action="../../controladores/programador/buscar.php" method="GET" class="border bg-dark bg-gradient text-light shadow rounded p-4 col-lg-6">
         <div class="row mb-3">
             <div class="col">
@@ -31,4 +31,4 @@
     </form>
 </div>
 
-<?php include_once '../../vistas/templates/header.php'; ?>
+<?php include_once '../../vistas/templates/footer.php.php'; ?>
