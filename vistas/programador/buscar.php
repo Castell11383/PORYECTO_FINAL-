@@ -31,4 +31,4 @@
     </form>
 </div>
 
-<?php include_once '../../vistas/templates/footer.php.php'; ?>
+<?php include_once '../../vistas/templates/footer.php'; ?>

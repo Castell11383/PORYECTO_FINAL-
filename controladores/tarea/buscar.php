@@ -89,4 +89,4 @@ include_once '../../vistas/templates/header.php'; ?>
         </div>
     </div>
 </div>
-<?php include_once '../../controladores/templates/footer.php'; ?>
+<?php include_once '../../vistas/templates/footer.php'; ?>
