@@ -8,6 +8,13 @@
     <link rel="shortcut icon" href="/src/images/sofware.png">
     <title>Tienda Virtual</title>
 </head>
+<style>
+        body {
+            background: url('../../src/images/fondo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f8f9fa;
+        }
+</style>
 <body>
 
 <?php include_once 'navbar.php' ?>

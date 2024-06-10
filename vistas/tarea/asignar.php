@@ -10,7 +10,7 @@ $aplicaciones = $aplicacion_modelo->buscar();
 
 include_once '../templates/header.php'; ?>
 
-<h1 class="text-center">Asignar Programador</h1>
+<h1 class="text-center text-black">Asignar Programador</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/tarea/guardar.php" method="POST" class="border shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
         <div class="row mb-3">
@@ -36,9 +36,9 @@ include_once '../templates/header.php'; ?>
                 <label for="tarea_estado">Estado</label>
                 <select name="tarea_estado" id="tarea_estado" class="form-select" aria-label="Default select example">
                     <option selected>Selecione...</option>
-                    <option value="1" >Iniciada</option>
-                    <option value="2">Finalizada</option>
-                    <option value="3">Pendiente</option>
+                    <option value=" Iniciada" >Iniciada</option>
+                    <option value="Finalizad">Finalizada</option>
+                    <option value="Pendiente">Pendiente</option>
                 </select>
             </div>
         </div>

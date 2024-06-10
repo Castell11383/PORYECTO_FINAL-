@@ -1,6 +1,6 @@
 <?php include_once '../templates/header.php'; ?>
 
-<h1 class="text-center">Registro de Aplicaciones</h1>
+<h1 class="text-center text-black">Registro de Aplicaciones</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/aplicacion/guardar.php" method="POST" class="border shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
         <div class="row mb-3">

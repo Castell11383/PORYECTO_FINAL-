@@ -3,7 +3,7 @@
     require '../../modelos/Tarea.php';
     
     $_GET['tarea_codigo'] = filter_var( base64_decode($_GET['tarea_codigo']), FILTER_SANITIZE_NUMBER_INT);
-
+    
 
     try{
         
@@ -11,7 +11,7 @@
         $eliminar = $tarea->eliminar();
 
         $resultado = [
-            'mensaje' => 'PRODUCTO ELIMINADO CORRECTAMENTE',
+            'mensaje' => 'TAREA ELIMINADA CORRECTAMENTE',
             'codigo' => 1
         ];
 

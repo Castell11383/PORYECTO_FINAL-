@@ -6,8 +6,10 @@
 
     $_POST['tarea_nombre'] = htmlspecialchars( $_POST['tarea_nombre']);
     $_POST['tarea_aplicacion'] = htmlspecialchars( $_POST['tarea_aplicacion']);
+    $_POST['tarea_estado'] = htmlspecialchars( $_POST['tarea_estado']);
     $_POST['tarea_descripcion'] = htmlspecialchars( $_POST['tarea_descripcion']);
-    
+
+   
     if($_POST['tarea_nombre'] == '' || $_POST['tarea_aplicacion'] == '' || $_POST['tarea_descripcion'] == ''){
         
         $resultado = [

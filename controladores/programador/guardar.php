@@ -11,7 +11,7 @@
     $_POST['progra_direccion'] = htmlspecialchars( $_POST['progra_direccion']);
     $_POST['progra_telefono'] = filter_var( $_POST['progra_telefono'], FILTER_VALIDATE_INT);
     $_POST['progra_dependecia'] = htmlspecialchars( $_POST['progra_dependecia']);
-    $_POST['progra_genero'] = filter_var( $_POST['progra_genero'], FILTER_VALIDATE_INT);
+    $_POST['progra_genero'] = htmlspecialchars( $_POST['progra_genero']);
     
     if($_POST['progra_nombre'] == '' || $_POST['progra_apellido'] == '' || $_POST['progra_edad'] < 18 || $_POST['progra_correo'] == ''|| $_POST['progra_direccion'] == ''|| $_POST['progra_telefono'] == '' || $_POST['progra_dependencia'] == '' || $_POST['progra_genero'] == ''){
         

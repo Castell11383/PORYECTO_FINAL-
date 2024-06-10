@@ -1,6 +1,6 @@
 <?php include_once '../../vistas/templates/header.php'; ?>
 
-<h1 class="text-center">Busqueda de Aplicaciones</h1>
+<h1 class="text-center text-black">Busqueda de Aplicaciones</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/tarea/buscar.php" method="GET" class="border bg-dark bg-gradient text-light shadow rounded p-4 col-lg-6">
         <div class="row mb-3">
@@ -19,4 +19,4 @@
     </form>
 </div>
 
-<?php include_once '../../vistas/templates/header.php'; ?>
+<?php include_once '../../vistas/templates/footer.php'; ?>

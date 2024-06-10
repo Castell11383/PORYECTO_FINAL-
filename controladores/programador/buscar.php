@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
 require '../../modelos/Programador.php';
 
 try {
@@ -39,7 +39,7 @@ include_once '../../vistas/templates/header.php'; ?>
         <?= $programador['mensaje'] ?>
     </div>
 </div>
-<h1 class="text-center">Listado de Programadores</h1>
+<h1 class="text-center text-black">Listado de Programadores</h1>
 <div class="row justify-content-center">
     <div class="col-lg-10">
         <table class="table table-bordered table-hover text-center bg-dark bg-gradient text-light">

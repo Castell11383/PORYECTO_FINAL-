@@ -6,13 +6,17 @@
 require '../../modelos/Tarea.php';
 
 try {
-    $_GET['tarea_nombre'] = htmlspecialchars($_GET['tarea_nombre']);
-    $_GET['tarea_aplicacion'] = htmlspecialchars($_GET['tarea_aplicacion']);
-    $_GET['tarea_descripcion'] = htmlspecialchars($_GET['tarea_descripcion']);
+    $_POST['progra_codigo'] = htmlspecialchars($_POST['progra_codigo']);
 
-
+    // var_dump($_POST);
+    // exit;
+    $id_programador =  $_POST['progra_codigo'];
+ 
     $objTarea = new Tarea();
-    $tareas = $objTarea->MostrarTarea();
+    $tareas = $objTarea->TareaAsignadaProgramador($id_programador);
+
+    $objTarea2 = new Tarea();
+    $tareasAsignada = $objTarea2->TareasAsignadas($id_programador);
 
     $tarea = [
         'mensaje' => 'Datos encontrados',
@@ -47,12 +51,31 @@ include_once '../../vistas/templates/header.php'; ?>
         <table class="table table-bordered table-hover text-center bg-dark bg-gradient text-light rounded shadow">
             <thead>
                 <tr>
-                    <th>No.</th>
                     <th>Programador</th>
                     <th>Aplicacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if ($tarea['codigo'] == 1 && count($tareas) > 0) : ?>
+                    <?php
+                    // Obtener el nombre completo del programador y el nombre de la aplicación de la primera tarea
+                    $nombre_completo = $tareas[0]['nombre_completo'];
+                    $apli_nombre = $tareas[0]['apli_nombre'];
+                    ?>
+                    <tr>
+                        <td><?= $nombre_completo ?></td>
+                        <td><?= $apli_nombre ?></td>
+                    </tr>
+                <?php endif ?>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover text-center bg-dark bg-gradient text-light rounded shadow mt-4">
+            <thead>
+                <tr>
+                    <th>No.</th>
                     <th>Tarea</th>
                     <th>Estado</th>
-                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,31 +83,21 @@ include_once '../../vistas/templates/header.php'; ?>
                     <?php foreach ($tareas as $key => $tarea) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
-                            <td><?= $tarea['nombre_completo'] ?></td>
-                            <td><?= $tarea['apli_nombre'] ?></td>
                             <td><?= $tarea['tarea_descripcion'] ?></td>
                             <td><?= $tarea['tarea_estado'] ?></td>
-                            <td class="text-center">
-                                <div class="dropdown">
-                                    <form action="../../controladores/tarea/eliminar.php" method="GET" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta aplicación?');">
-                                        <input type="hidden" name="tarea_codigo" value="<?= base64_encode($tarea['tarea_codigo']) ?>">
-                                        <button class="btn btn-warning" type="submit"><i class="bi bi-trash me-2"></i>Eliminar</button>
-                                    </form>
-                                </div>
-                            </td>
                         </tr>
                     <?php endforeach ?>
                 <?php else : ?>
                     <tr>
-                        <td colspan="4">No hay Aplicaciones registrados</td>
+                        <td colspan="3">No hay Tareas registradas</td>
                     </tr>
                 <?php endif ?>
             </tbody>
-
         </table>
+
         <div class="row mb-4 justify-content-center">
             <div class="col-lg-3">
-                <a href="../../vistas/tarea/buscar.php" class="btn btn-danger text-light w-100"><i class="bi bi-backspace-fill"></i> Volver</a>
+                <a href="../../vistas/tarea/seleccionarProgramador.php" class="btn btn-danger text-light w-100"><i class="bi bi-backspace-fill"></i> Volver</a>
             </div>
         </div>
     </div>

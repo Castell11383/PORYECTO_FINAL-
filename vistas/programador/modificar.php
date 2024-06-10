@@ -14,7 +14,7 @@ $programadorRegistrado = $programador->buscarPorId($_GET['progra_codigo']);
 
 <?php include_once '../../vistas/templates/header.php'; ?>
 
-<h1 class="text-center">Formulario para modificar Programadores</h1>
+<h1 class="text-center text-black">Formulario para modificar Programadores</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/programador/modificar.php" method="POST" class="border shadow rounded p-4 col-lg-6 bg-dark bg-gradient text-light text-center">
 
