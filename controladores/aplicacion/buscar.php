@@ -66,14 +66,9 @@ include_once '../../vistas/templates/header.php'; ?>
                             <td><?= $aplicacion['apli_dependencia'] ?></td>
                             <td class="text-center">
                                 <div class="dropdown">
-                                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Opciones
+                                    <button class="btn btn-warning" type="button" data-bs-toggle="dropdown" aria-expanded="false"href="../../controladores/aplicacion/eliminar.php?apli_codigo=<?= base64_encode($aplicacion['apli_codigo'])?>"><i class="bi bi-trash me-2"></i>
+                                        Eliminar
                                     </button>
-                                    <ul class="dropdown-menu bg-secondary bg-gradient text-light">
-                                        <li><a class="dropdown-item" href=""></i>Modificar</a></li>
-                                        <li><a class="dropdown-item" href=""><i class="bi bi-trash me-2"></i>Eliminar</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-device-ssd-fill"></i>Tareas</a></li>
-                                    </ul>
                                 </div>
 
                             </td>

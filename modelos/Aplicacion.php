@@ -2,6 +2,7 @@
 require_once 'Conexion.php';
 
 class Aplicacion extends Conexion{
+    public $apli_codigo;
     public $apli_nombre;
     public $apli_dependencia;
     public $apli_descripcion;
@@ -35,4 +36,11 @@ class Aplicacion extends Conexion{
         $resultado = self::servir($sql);
         return $resultado;
     }
+
+    public function eliminar(){
+        $sql = "UPDATE aplicacion SET apli_situacion = 0 WHERE apli_codigo = $this->apli_codigo";
+        $resultado = $this->ejecutar($sql);
+        return $resultado;
+    }
+
 }

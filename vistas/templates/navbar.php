@@ -26,7 +26,7 @@
           <ul class="dropdown-menu bg-secondary bg-gradient text-black">
             <li><a class="dropdown-item" href="../../vistas/aplicacion/registar.php"><i class="bi bi-device-ssd-fill"></i> Crear Aplicacion</a></li>
             <li><a class="dropdown-item" href="../../vistas/aplicacion/buscar.php"><i class="bi bi-binoculars-fill"></i> Buscar Aplicacion</a></li>
-            <li><a class="dropdown-item" href="#"><i class="bi bi-window-stack"></i> Aplicaciones</a></li>
+            <li><a class="dropdown-item" href="../../controladores/aplicacion/buscar.php"><i class="bi bi-window-stack"></i> Aplicaciones</a></li>
           </ul>
         </li>
     </div>
