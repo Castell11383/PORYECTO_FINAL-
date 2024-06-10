@@ -46,6 +46,11 @@ class Tarea extends Conexion{
         return $resultado;
     }
 
+    public function eliminar(){
+        $sql = "UPDATE tarea SET tarea_situacion = 0 WHERE tarea_codigo = $this->tarea_codigo";
+        $resultado = $this->ejecutar($sql);
+        return $resultado;
+    }
 
  
 

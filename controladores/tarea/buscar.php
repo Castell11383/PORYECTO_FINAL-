@@ -9,6 +9,7 @@ try {
     $_GET['tarea_nombre'] = htmlspecialchars($_GET['tarea_nombre']);
     $_GET['tarea_aplicacion'] = htmlspecialchars($_GET['tarea_aplicacion']);
     $_GET['tarea_descripcion'] = htmlspecialchars($_GET['tarea_descripcion']);
+    $_GET['tarea_estado'] = filter_var($_GET['tarea_estado'], FILTER_VALIDATE_INT);
 
 
     $objTarea = new Tarea();
@@ -24,7 +25,6 @@ try {
         'detalle' => $e->getMessage(),
         'codigo' => 0
     ];
-
 } catch (PDOException $pe) {
     $tarea = [
         'mensaje' => 'OCURRIO UN ERROR ELIMINANDO EL REGISTRO A LA BD',
@@ -42,7 +42,7 @@ include_once '../../vistas/templates/header.php'; ?>
         <?= $tarea['mensaje'] ?>
     </div>
 </div>
-<h1 class="text-center">Listado de Aplicaciones</h1>
+<h1 class="text-center">Listado de Tareas</h1>
 <div class="row justify-content-center">
     <div class="col-lg-10">
         <table class="table table-bordered table-hover text-center bg-dark bg-gradient text-light rounded shadow">
@@ -53,6 +53,7 @@ include_once '../../vistas/templates/header.php'; ?>
                     <th>Aplicacion</th>
                     <th>Tarea</th>
                     <th>Estado</th>
+                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,10 +64,11 @@ include_once '../../vistas/templates/header.php'; ?>
                             <td><?= $tarea['nombre_completo'] ?></td>
                             <td><?= $tarea['apli_nombre'] ?></td>
                             <td><?= $tarea['tarea_descripcion'] ?></td>
+                            <td><?= $tarea['tarea_estado'] ?></td>
                             <td class="text-center">
                                 <div class="dropdown">
-                                    <form action="../../controladores/aplicacion/eliminar.php" method="GET" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta aplicación?');">
-                                        <input type="hidden" name="apli_codigo" value="<?= base64_encode($aplicacion['apli_codigo']) ?>">
+                                    <form action="../../controladores/tarea/eliminar.php" method="GET" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta aplicación?');">
+                                        <input type="hidden" name="tarea_codigo" value="<?= base64_encode($tarea['tarea_codigo']) ?>">
                                         <button class="btn btn-warning" type="submit"><i class="bi bi-trash me-2"></i>Eliminar</button>
                                     </form>
                                 </div>
