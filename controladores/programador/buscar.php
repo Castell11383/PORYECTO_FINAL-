@@ -67,7 +67,6 @@ include_once '../../vistas/templates/header.php'; ?>
                                     <ul class="dropdown-menu bg-secondary bg-gradient text-light">
                                         <li><a class="dropdown-item" href="../../vistas/programador/modificar.php?progra_codigo=<?= base64_encode($programador['progra_codigo'])?>"><i class="bi bi-pencil-square me-2"></i>Modificar</a></li>
                                         <li><a class="dropdown-item" href="../../controladores/programador/eliminar.php?progra_codigo=<?= base64_encode($programador['progra_codigo'])?>"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-device-ssd-fill"></i>Tareas</a></li>
                                     </ul>
                                 </div>
 

@@ -117,10 +117,9 @@
                 <h2>Gestión de Proyectos</h2>
                 <p>Gestionamos tus proyectos tecnológicos desde la planificación hasta la implementación, asegurando el éxito en cada etapa.</p>
             </div>
-        </div>
-
-        <div class="cta">
+            <div class="cta">
             <a href="https://www.solusoft.es/servicios/desarrollo-de-software">Contáctanos</a>
+        </div>
         </div>
     </div>
 
