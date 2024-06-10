@@ -1,7 +1,7 @@
 <?php
 require_once 'Conexion.php';
 
-class Cliente extends Conexion{
+class Aplicacion extends Conexion{
     public $apli_nombre;
     public $apli_dependencia;
     public $apli_descripcion;
@@ -14,14 +14,14 @@ class Cliente extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT into aplicaciones (apli_nombre, apli_dependencia, apli_descripcion) values ('$this->apli_nombre','$this->apli_dependencia','$this->apli_descripcion')";
+        $sql = "INSERT into aplicacion (apli_nombre, apli_dependencia, apli_descripcion) values ('$this->apli_nombre','$this->apli_dependencia','$this->apli_descripcion')";
         $resultado = $this->ejecutar($sql);
         return $resultado; 
     }
     
     public function buscar(...$columnas){
         $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
-        $sql = "SELECT $cols FROM aplicaciones where apli_situacion = 1 ";
+        $sql = "SELECT $cols FROM aplicacion where apli_situacion = 1 ";
 
         if($this->apli_nombre != ''){
             $sql .= " AND apli_nombre like '%$this->apli_nombre%' ";
