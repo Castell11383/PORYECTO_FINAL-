@@ -9,7 +9,7 @@ $programador = new Programador();
 
 
 $programadorRegistrado = $programador->buscarPorId($_GET['progra_codigo']);
-// var_dump($programadorRegistrado);
+
 ?>
 
 <?php include_once '../../vistas/templates/header.php'; ?>

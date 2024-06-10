@@ -29,6 +29,15 @@
             <li><a class="dropdown-item" href="../../controladores/aplicacion/buscar.php"><i class="bi bi-window-stack"></i> Aplicaciones</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-workspace"></i></i> Tareas
+          </a>
+          <ul class="dropdown-menu bg-secondary bg-gradient text-black">
+            <li><a class="dropdown-item" href="../../vistas/tarea/asignar.php"><i class="bi bi-pen-fill"></i> Asignar Programador</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-binoculars-fill"></i> Tareas</a></li>
+          </ul>
+        </li>
     </div>
   </div>
 </nav>

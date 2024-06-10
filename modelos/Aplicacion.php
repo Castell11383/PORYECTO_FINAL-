@@ -9,6 +9,7 @@ class Aplicacion extends Conexion{
 
     public function __construct($args = [])
     {
+        $this->apli_codigo = $args['apli_codigo'] ?? null;
         $this->apli_nombre = $args['apli_nombre'] ?? null;
         $this->apli_dependencia = $args['apli_dependencia'] ?? '';
         $this->apli_descripcion = $args['apli_descripcion'] ?? '';

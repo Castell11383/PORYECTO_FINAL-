@@ -4,6 +4,7 @@
     
     $_GET['apli_codigo'] = filter_var( base64_decode($_GET['apli_codigo']), FILTER_SANITIZE_NUMBER_INT);
 
+
     try{
         
         $aplicacion = new Aplicacion($_GET);
