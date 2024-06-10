@@ -35,7 +35,7 @@
           </a>
           <ul class="dropdown-menu bg-secondary bg-gradient text-black">
             <li><a class="dropdown-item" href="../../vistas/tarea/asignar.php"><i class="bi bi-pen-fill"></i> Asignar Programador</a></li>
-            <li><a class="dropdown-item" href="#"><i class="bi bi-binoculars-fill"></i> Tareas</a></li>
+            <li><a class="dropdown-item" href="../../vistas/tarea/buscar.php"><i class="bi bi-binoculars-fill"></i> Registro de Tareas</a></li>
           </ul>
         </li>
     </div>
